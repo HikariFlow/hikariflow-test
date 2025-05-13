@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hikari Flow | Minimalist Anime Streetwear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        .product-overlay {
+            transition: opacity 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #000;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .image-placeholder {
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold tracking-tight">HIKARI FLOW</span>
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="nav-link px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#" class="nav-link px-3 py-2 text-sm font-medium">Shop</a>
+                    <a href="#" class="nav-link px-3 py-2 text-sm font-medium">Collections</a>
+                    <a href="#" class="nav-link px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#" class="nav-link px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#" class="ml-4">
+                        <i class="fas fa-shopping-cart text-gray-700 hover:text-black"></i>
+                    </a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Subtle Anime <br>Streetwear</h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-md">Hikari Flow blends anime and gaming influences with minimalist streetwear that fits seamlessly into everyday life.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-800 transition">Shop Now</a>
+                        <a href="#" class="border border-black px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">View Collection</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="image-placeholder rounded-lg shadow-xl w-full max-w-md h-96 animate-float">
+                        [Product Showcase]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Subtle References, Bold Style</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our designs incorporate hidden anime and gaming elements that only true fans will recognize, while maintaining a clean aesthetic for everyday wear.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card relative group overflow-hidden rounded-lg">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg image-placeholder">
+                        [Shadow T-Shirt]
+                    </div>
+                    <div class="product-overlay absolute inset-0 flex flex-col justify-end p-6 opacity-0">
+                        <h3 class="text-lg font-medium">Shadow T-Shirt</h3>
+                        <p class="text-gray-600 mt-1">Subtle Naruto reference in minimalist design</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="font-bold">$39.99</span>
+                            <button class="bg-black text-white px-4 py-2 rounded text-sm hover:bg-gray-800">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card relative group overflow-hidden rounded-lg">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg image-placeholder">
+                        [Pixel Hoodie]
+                    </div>
+                    <div class="product-overlay absolute inset-0 flex flex-col justify-end p-6 opacity-0">
+                        <h3 class="text-lg font-medium">Pixel Hoodie</h3>
+                        <p class="text-gray-600 mt-1">Minimalist 8-bit gaming inspiration</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="font-bold">$69.99</span>
+                            <button class="bg-black text-white px-4 py-2 rounded text-sm hover:bg-gray-800">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card relative group overflow-hidden rounded-lg">
+                    <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg image-placeholder">
+                        [Spirit Jacket]
+                    </div>
+                    <div class="product-overlay absolute inset-0 flex flex-col justify-end p-6 opacity-0">
+                        <h3 class="text-lg font-medium">Spirit Jacket</h3>
+                        <p class="text-gray-600 mt-1">Studio Ghibli inspired outerwear</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="font-bold">$89.99</span>
+                            <button class="bg-black text-white px-4 py-2 rounded text-sm hover:bg-gray-800">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-b border-black font-medium pb-1">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Philosophy -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid grid-cols-2 gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <div class="rounded-lg shadow-lg w-full h-96 image-placeholder">
+                        [Design Process]
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">The Hikari Flow Ethos</h2>
+                    <p class="text-gray-600 mb-6">Hikari (光) means "light" in Japanese, representing our philosophy of subtle illumination. We create clothing that carries hidden meaning for those who know where to look, while maintaining a clean, contemporary aesthetic.</p>
+                    <p class="text-gray-600 mb-8">Our designs blend:</p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-black mr-3">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <p class="text-gray-600">Gaming culture references</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-black mr-3">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <p class="text-gray-600">Anime-inspired motifs</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-black mr-3">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <p class="text-gray-600">Minimalist streetwear</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-6 w-6 text-black mr-3">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <p class="text-gray-600">Sustainable materials</p>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-black font-medium">
+                        Learn more about our brand
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-black text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Join the Flow</h2>
+            <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Subscribe to get early access to new drops, exclusive designs, and 10% off your first order.</p>
+            <form class="max-w-md mx-auto">
+                <div class="flex">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-md text-black focus:outline-none">
+                    <button type="submit" class="bg-white text-black px-6 py-3 rounded-r-md font-medium hover:bg-gray-200 transition">Subscribe</button>
+                </div>
+            </form>
+            <p class="text-gray-400 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Shop</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-black">All Products</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">New Arrivals</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Best Sellers</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Sale Items</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">About</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-black">Our Story</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Design Philosophy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Sustainability</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Help</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-black">FAQ</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Size Guide</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-black">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">Connect</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-discord"></i></a>
+                    </div>
+                    <p class="text-sm text-gray-600">© 2023 Hikari Flow. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
